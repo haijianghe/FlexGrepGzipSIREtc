@@ -9,3 +9,7 @@ java sir.mts.MakeTestScript -sf ../testplans.alt/v2/v2.tsl.universe -sn ../scrip
 对V4版本来说，有两个测试套件：
 java sir.mts.MakeTestScript -sf ../testplans.alt/v4/v0.tsl.universe -sn ../scripts/runall0.sh -en flex.int.exe -tg bsh
 java sir.mts.MakeTestScript -sf ../testplans.alt/v4/v2.tsl.universe -sn ../scripts/runall2.sh -en flex.int.exe -tg bsh
+
+对grep来说，
+   针对v0_1.tsl.universe，加参数-nesc，不使用转义
+   v0_2.tsl.universe，不加参数-nesc
