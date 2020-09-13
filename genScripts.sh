@@ -13,3 +13,5 @@ java sir.mts.MakeTestScript -sf ../testplans.alt/v4/v2.tsl.universe -sn ../scrip
 对grep来说，
    针对v0_1.tsl.universe，加参数-nesc，不使用转义
    v0_2.tsl.universe，不加参数-nesc
+java sir.mts.MakeTestScript -sf ../testplans.alt/v1/v0_1.tsl.universe -sn ../scripts/runall0.sh -en grep.int.exe -nesc -tg bsh
+java sir.mts.MakeTestScript -sf ../testplans.alt/v1/v0_2.tsl.universe -sn ../scripts/runall2.sh -en grep.int.exe -tg bsh
