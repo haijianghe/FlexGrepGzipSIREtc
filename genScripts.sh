@@ -1,4 +1,6 @@
 以flex为例，
+先要求配置环境，将javamts下的两个Jar包antlr-2.7.6.jar和mts.jar添加到java路径的lib里。
+export CLASSPATH=$CLASSPATH:/home/ccsu/ObjectTools/mts/lib/antlr-2.7.6.jar:/home/ccsu/ObjectTools/mts/bin/mts.jar
 
 对V2版本来说，有两个测试套件：
 java sir.mts.MakeTestScript -sf ../testplans.alt/v2/v0.tsl.universe -sn ../scripts/runall0.sh -en flex.int.exe -tg bsh
