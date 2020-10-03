@@ -12,7 +12,7 @@ java sir.mts.MakeTestScript -sf ../testplans.alt/v1/v0_2.universe -sn ../scripts
 运行bash genScripts.sh，在文件夹scripts下生成文件runall.sh
 (3)拷贝assembSIRNewCov.exe文件到source目录，执行./assembSIRNewCov.exe sed,生成文件getcovs.origin.sh
 (4)将sed/versions.alt/versions.seeded/v1（其它版本亦如此，特别注意FaultSeeds.h）下所有文件拷贝到source目录，测试gcc命令，检查是否能够通过编译；如果通过编译，修改文件buildexe.sh，类似：
-        rm FaultSeeds.h
+        #rm FaultSeeds.h
         #-Wimplicit-int
         #-Wimplicit-function-declaration
         rm sed.int.exe
