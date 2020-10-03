@@ -3,3 +3,4 @@
 在VirtualBox+Ubuntu下，
 （1）拷贝create-ver-dir.exe文件到source目录，检查sed的V?有几个bug版本，使用create-ver-dir.exe XX（bug版本数目）在文件夹traces下生成若干文件夹v1,v2,...，再手动添加文件夹vok到traces；
 拷贝文件夹v1,v2,...,vok到目录outputs；traces目录将保存语句覆盖数据，目录outputs将保存关于各个测试用例的程序输出结果。
+（2）
