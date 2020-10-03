@@ -19,4 +19,7 @@ java sir.mts.MakeTestScript -sf ../testplans.alt/v1/v0_2.universe -sn ../scripts
         #-include stdlib.h
         #-Wpointer-to-int-cast
         gcc  -fprofile-arcs -ftest-coverage  -I . sed.c  -o sed.int.exe
-(5)
+(5)拷贝文件FaultSeeds.h，更名为FaultSeeds.origin.h。
+（6）执行./newRunAllVerSH.exe sed;它内部将：
+       （I）拷贝FaultSeeds.origin.h，并修改其中的故障植入语句，执行buildexe.sh，生成sed.inst.exe；
+       （II）执行件getcovs.sh
