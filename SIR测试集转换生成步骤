@@ -22,4 +22,5 @@ java sir.mts.MakeTestScript -sf ../testplans.alt/v1/v0_2.universe -sn ../scripts
 (5)拷贝文件FaultSeeds.h，更名为FaultSeeds.origin.h。
 （6）执行./newRunAllVerSH.exe sed;它内部将：
        （I）拷贝FaultSeeds.origin.h，并修改其中的故障植入语句，执行buildexe.sh，生成sed.inst.exe；
-       （II）执行件getcovs.sh
+       （II）执行getcovs.sh
+       最终，测试输出结果存入outputs目录，语句覆盖数据存入traces目录。
