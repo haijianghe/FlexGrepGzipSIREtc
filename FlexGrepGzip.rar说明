@@ -1,1 +1,11 @@
-
+FlexGrepGzip.rar解压后，是SIR的的三个数据集：Flex，Grep，Gzip数据集。包含以下内容：
+1，XXX.fault，各版本故障语句的行号。
+2，XXX.testcase，版本数，测试数目，各版本通过测试用例数、未通过测试用例数。
+3，文件夹info，只是保留数据，研究中用不到。一个文件或两个文件，
+     fault-matrix  每个版本所有测试用例的执行结果。
+     fault-matrix.sir 与fault-matrix相同，不过带后缀.sir，说明是SIR官方网站的运行结果。
+4，profile，我的程序生成结果，程序谱，aep、aef、anp、anf
+5, source.alt  正确版本的源代码
+6，version.alt 各故障版本的源代码。
+7, source  VirtualBox+Ubuntu下部分操作文件，生成Flex，Grep，Gzip的测试结果，覆盖数据。
+8, scripts VirtualBox+Ubuntu下操作文件，如何执行测试用例。
