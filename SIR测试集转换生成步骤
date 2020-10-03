@@ -11,3 +11,12 @@ java sir.mts.MakeTestScript -sf ../testplans.alt/v1/v0_2.universe -sn ../scripts
 数据集Flex,Grep,Gzip会不同，有的两个universe文件，有点尽管只有一个universe，但文件名不同。
 运行bash genScripts.sh，在文件夹scripts下生成文件runall.sh
 (3)拷贝assembSIRNewCov.exe文件到source目录，执行./assembSIRNewCov.exe sed,生成文件getcovs.origin.sh
+(4)将sed/versions.alt/versions.seeded/v1（其它版本亦如此，特别注意FaultSeeds.h）下所有文件拷贝到source目录，测试gcc命令，检查是否能够通过编译；如果通过编译，修改文件buildexe.sh，类似：
+        rm FaultSeeds.h
+        #-Wimplicit-int
+        #-Wimplicit-function-declaration
+        rm sed.int.exe
+        #-include stdlib.h
+        #-Wpointer-to-int-cast
+        gcc  -fprofile-arcs -ftest-coverage  -I . sed.c  -o sed.int.exe
+(5)
