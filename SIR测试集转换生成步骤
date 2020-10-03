@@ -10,3 +10,4 @@ echo "$(date) generate test scripts: fault-$fault"
 java sir.mts.MakeTestScript -sf ../testplans.alt/v1/v0_2.universe -sn ../scripts/runall.sh -en sed.int.exe -tg bsh
 数据集Flex,Grep,Gzip会不同，有的两个universe文件，有点尽管只有一个universe，但文件名不同。
 运行bash genScripts.sh，在文件夹scripts下生成文件runall.sh
+(3)拷贝assembSIRNewCov.exe文件到source目录，执行./assembSIRNewCov.exe sed,生成文件getcovs.origin.sh
