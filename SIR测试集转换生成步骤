@@ -3,4 +3,10 @@
 在VirtualBox+Ubuntu下，
 （1）拷贝create-ver-dir.exe文件到source目录，检查sed的V?有几个bug版本，使用create-ver-dir.exe XX（bug版本数目）在文件夹traces下生成若干文件夹v1,v2,...，再手动添加文件夹vok到traces；
 拷贝文件夹v1,v2,...,vok到目录outputs；traces目录将保存语句覆盖数据，目录outputs将保存关于各个测试用例的程序输出结果。
-（2）
+（2）拷贝genScripts.sh文件到source目录，执行
+export CLASSPATH=$CLASSPATH:/home/ccsu/ObjectTools/mts/lib/antlr-2.7.6.jar:/home/ccsu/ObjectTools/mts/bin/mts.jar
+#generate test scripts
+echo "$(date) generate test scripts: fault-$fault"
+java sir.mts.MakeTestScript -sf ../testplans.alt/v1/v0_2.universe -sn ../scripts/runall.sh -en sed.int.exe -tg bsh
+数据集Flex,Grep,Gzip会不同，有的两个universe文件，有点尽管只有一个universe，但文件名不同。
+运行bash genScripts.sh，在文件夹scripts下生成文件runall.sh
